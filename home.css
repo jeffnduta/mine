@@ -296,17 +296,23 @@ footer .credits a {
 /*--------------=========Responsive area==========------------------*/
 
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-20px);
-    }
-    60% {
-        transform: translateY(-10px);
-    }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
+
+/* Apply the animation to an element */
+.test-element {
+  animation: pulse 2s infinite;
+}
+
 
 @keyframes changeText {
     0%, 50% {
