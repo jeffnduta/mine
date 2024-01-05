@@ -15,7 +15,8 @@ body {
     flex-direction: column;
     overflow-x: hidden;
     position: relative; 
-    background-color: #131111;
+        background-image: url('10.jpg'); 
+    background-size: cover;
 }
 body::before {
     content: "";
@@ -69,8 +70,7 @@ header {
     padding: 0 20px; 
     z-index:4;
     box-sizing: border-box;
-    background-image: url('10.jpg'); 
-    background-size: cover;
+
 }
 
 
