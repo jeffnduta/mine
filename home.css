@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     overflow-x: hidden;
     position: relative; 
-        background-image: url('10.jpg'); 
+    background-image: url('10.jpg'); 
     background-size: cover;
 }
 body::before {
@@ -288,38 +288,61 @@ footer .copyright {
 footer .credits {
   margin-bottom: 0;
 }
-
 footer .credits a {
   color: #fff;
 }
 
 /*--------------=========Responsive area==========------------------*/
 
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Apply the animation to an element */
-.test-element {
-  animation: pulse 2s infinite;
-}
-
-
-@keyframes changeText {
-    0%, 50% {
-        color: rgb(241, 237, 237);
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 2;
     }
 }
 
+.big-title {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInItem 2s ease-in-out forwards;
+}
+@keyframes fadeInItem {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes wave {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animated-text {
+    font-size: 2.5rem;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .animated-text span {
+    display: inline-block;
+    transform-origin: center bottom;
+    animation: wave 1s ease-in-out infinite;
+    animation-delay: calc(0.2s * var(--index));
+    color: #fff;
+    transition: opacity 1.1s ease-in-out;
+  }
 
 
 @media screen and (max-width: 870px) {
@@ -401,6 +424,11 @@ footer .credits a {
         font-size: 1.5rem;
         margin: 10px 0;
     }
+    .animated-text {
+        font-size: 1.2rem;
+        text-align: center;
+        display: inline-block;
+      }
 
     .text {
         font-size: .95rem;
