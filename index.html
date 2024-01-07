@@ -4,39 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
+
     <title>HOME</title>
 </head>
 <body>
+  
 <!-- Messenger Chat plugin Code -->
-    <div id="fb-root"></div>
+<div id="fb-root"></div>
 
-    <!-- Your Chat plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
+<!-- Your Chat plugin code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
 
-    <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "211380878717903");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "211380878717903");
+  chatbox.setAttribute("attribution", "biz_inbox");
+</script>
 
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v18.0'
-        });
-      };
+<!-- Your SDK code -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v18.0'
+    });
+  };
 
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
 
    
     <!-- ======= Header ======= -->
@@ -51,7 +55,7 @@
                 </div>
                 <div class="links">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home.html">Home</a></li>
                         <li><a href="aboutme.html">About Me</a></li>
                         <li><a href="contact.html">Contacts</a></li>
                         <li><a href="project.html" class="btn">See my projects</a></li>
@@ -78,7 +82,27 @@
             <div class="big-title">
                    <h1>Hi, I'm Jeff Nduta a</h1>
               <h1>
-                <span class="text-change animate-bounce"> graphic Designer</span>
+                <div class="animated-text" id="textContainer">
+                  <span style="--index: 1;"></span>
+                  <span style="--index: 2;"></span>
+                  <span style="--index: 3;"></span>
+                  <span style="--index: 4;"></span>
+                  <span style="--index: 5;"></span>
+                  <span style="--index: 6;"></span>
+                  <span style="--index: 7;"></span>
+                  <span style="--index: 8;"></span>
+                  <span style="--index: 9;"></span>
+                  <span style="--index: 10;"></span>
+                  <span style="--index: 11;"></span>
+                  <span style="--index: 12;"></span>
+                  <span style="--index: 13;"></span>
+                  <span style="--index: 14;"></span>
+                  <span style="--index: 15;"></span>
+                  <span style="--index: 16;"></span>
+                  <span style="--index: 17;"></span>
+                </div>
+
+
                </h1>
             </div>
         <p class="text">
@@ -99,31 +123,14 @@
 
 
   <!-- ======= Footer ======= -->
-
-
-  <div id="hex-grid">
-    <div class="light"></div>
-    <div class="grid"></div>
-</div>
-
-
-</div>
-
-
-
   <footer>
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
           <div class="copyright-box">
-            <p class="copyright">&copy; Copyright <strong>Jeffnduta </strong>. All Rights Reserved</p>
+            <p class="copyright">&copy; Copyright <strong>2024 </strong>. All Rights Reserved</p>
             <div class="credits">
-              <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
-            -->
+
               Designed by <a href="#">Jeffnduta</a>
             </div>
           </div>
@@ -132,9 +139,13 @@
     </div>
   </footer><!-- End  Footer -->
 
+  <div id="hex-grid">
+    <div class="light"></div>
+    <div class="grid"></div>
+</div>
 
 
-
+</div>
 
 
 
