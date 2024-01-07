@@ -20,16 +20,36 @@ declare();
 events();
 
 //-----================text change=====----
-const span = document.querySelector('.text-change');
 
-const jobTitles = ["Graphic Designer ", "web Designer "];
+const textContainer = document.getElementById('textContainer');
+const spans = textContainer.querySelectorAll('span');
+const words = ['graphic designer', 'web designer', 'freelancer'];
 
-let currentTitleIndex = 0;
-function changeTextAndColor() {
-    span.textContent = jobTitles[currentTitleIndex];
-    currentTitleIndex = (currentTitleIndex + 1) % jobTitles.length;
+let currentWordIndex = 0;
+
+function updateText() {
+  spans.forEach((span, index) => {
+    span.textContent = words[currentWordIndex][index];
+  });
 }
-setInterval(changeTextAndColor, 1000);
+   
+function nextWord() {
+  currentWordIndex = (currentWordIndex + 1) % words.length;
+  updateText();
+}
+
+setInterval(() => {
+  spans.forEach(span => {
+    span.style.opacity = 0;
+  });
+
+  setTimeout(() => {
+    nextWord();
+    spans.forEach(span => {
+      span.style.opacity = 9;
+    });
+  }, 500); // Adjust the timing to control the delay between opacity change and text change
+}, 2000); // Change text every 2 seconds
 
 //-----=====================TOP NAVIGATION END======-
 
