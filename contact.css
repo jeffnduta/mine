@@ -240,10 +240,27 @@ header .container {
     margin-bottom: 70px;
 }
 
-.icon {
-    font-size: 1.5em;
-    margin-right: 10px;
+
+
+.contact-info.align-items-start .icon {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    border-radius: 50%; /* Create a circular shape */
+    overflow: hidden; /* Hide overflowing content */
 }
+
+.contact-info.align-items-start .icon img {
+    width: 100%; /* Make the image fill the circular container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.contact-info.align-items-start .icon:hover img {
+    transform: scale(1.2); /* Increase the size on hover (adjust as needed) */
+}
+
+
+
 
 .text {
     line-height: 1.6;
